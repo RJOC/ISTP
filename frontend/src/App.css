@@ -1,0 +1,495 @@
+/*custom fonts*/
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Book.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Medium.ttf');
+  font-weight: 400;
+}
+
+/*Default Css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #8fbbda !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #8fbbda;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #8fbbda;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/************ Navbar Css ************/
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32 ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 18px 0;
+  background-color: #8fbbda;
+}
+
+nav.navbar a.navbar-brand {
+  width: 30%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-text button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button span {
+  z-index: 1;
+}
+
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button:hover {
+  color: #8fbbda;
+}
+
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid #fff;
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
+  
+}
+
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  background-color: #fff;
+  height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #fff;
+  height: 2px;
+  
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+nav.navbar button:hover {
+  color: #8fbbda;
+}
+
+
+
+
+
+
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  padding: 100px 0px 0px 0px;
+  background-color: #8fbbda;
+
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 65px;
+  background: linear-gradient(90.21deg, rgba(18, 99, 162) -5.91%, rgba(22, 124, 201, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top:0px;
+  display: inline-block;
+  
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.banner p {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 0px;
+  letter-spacing: 0.8px;
+  display: flex;
+}
+
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+
+.banner button:hover svg {
+  margin-left: 25px;
+  align-items: center;
+  color: #8fbbda;
+  
+}
+
+.banner img {
+  animation: updown 3s linear infinite;
+}
+
+.center {
+  padding: none;
+  margin: none;
+  align-items: center;
+  text-align: center;
+}
+
+.banner FormControl{
+height: 40px;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.banner .butcen {
+  display: inline-block;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.banner button:hover {
+  color: #8fbbda;
+}
+
+@media (max-width: 1026px) {
+  .scotimg {
+    display: none;
+  }
+
+  nav.navbar {
+    background-color: #8fbbda;
+  }
+}
+
+
+input.me-2.form-control{
+width:250px !important}
+
+
+
+/************ Footer Css ************/
+.footer {
+  padding: 0 0 0 0;
+  /*background-image: url('./assets/img/footer-bg.png');*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  width: 28%;
+}
+
+.footer p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.footer .foottext {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* Desc section */
+.desc {
+  background-color: #fff;
+  color: #8fbbda;
+  box-sizing: border-box;
+
+}
+
+.desc h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.desc .left {
+  align-items: left !important;
+  text-align: left;
+}
+
+.desc h2 {
+  margin-top: 30px;
+  margin-left: 110px;
+}
+
+.desc p {
+  color: black;
+  margin-left: 165px;
+  margin-right: 70px;
+}
+
+.desc .bottomSpace {
+  margin-bottom: 70px;
+}
+
+.desc img {
+  height: 260px;
+}
+
+/* Register & Login section */
+
+.Register,
+.Login {
+  padding: 70px 0px 60px 0px;
+  background-color: #8fbbda;
+  width: 400px;
+  color: #fff;
+  margin-top: 40px ;
+  margin-bottom: 30px;
+  
+}
+
+.noborder{ 
+  border-color: white !important;
+  height: auto!important;
+  text-align: center !important;
+  padding:0 !important;
+  color:white !important;
+  
+}
+
+.GrandParent {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.Parent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Login h1,
+.Register h1 {
+  margin-top: 15px;
+  text-align: center !important;
+  margin-bottom: 30px;
+  font-size: 30px;}
+
+
+
+.Login input,
+.Register input {
+  margin-bottom: 20px;
+}
+
+.Login p,
+.Register p {
+  margin-bottom: 0px;
+}
+
+.Login input,
+.Register input {
+  color: black;
+  width: 100%;
+  padding: 7px 16px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/*Related to the password bar and changing its colors*/
+.passbar p{
+color: white !important;
+font-style:bold;
+margin-bottom: 0px;}
+
+
+/* Messages section */
+.messages{
+  display: flex;
+  flex-direction: column;
+  overflow-y:scroll;
+  scrollbar-width: none;
+}
