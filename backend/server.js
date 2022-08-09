@@ -21,6 +21,7 @@ app.use("/api/message", messageRoutes);
 
 //HOSTING code
 const __dirname1 = path.resolve();
+
 if (process.env.NODE_ENV === "production") {
   //establishing path from current working directory to the build folder of front end
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
