@@ -19,7 +19,7 @@ import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 import Moment from "react-moment";
 
-const ENDPOINT = "https://istp-web-application.herokuapp.com:3000";
+const ENDPOINT = "https://istp-web-application.herokuapp.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
