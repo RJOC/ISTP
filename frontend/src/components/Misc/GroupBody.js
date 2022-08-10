@@ -27,6 +27,7 @@ const GroupBody = () => {
     {
       id: "1",
       title: "Internation students",
+      longline: "",
       body: "Testing this function!",
       image:
         "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
@@ -146,12 +147,13 @@ const GroupBody = () => {
             <Container maxW="80rem" centerContent>
               <SimpleGrid columns={[1, 1, 1, 2]}>
                 {dataList.map(function (data) {
-                  const { id, title, body, image } = data;
+                  const { id, title, body, longline, image } = data;
                   return (
                     <CardTemp
                       key={id}
                       title={title}
                       body={body}
+                      longline={longline}
                       image={image}
                     />
                   );

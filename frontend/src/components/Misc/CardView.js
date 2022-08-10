@@ -43,16 +43,19 @@ function CardView(props) {
         >
           {location}
         </Text>
-        {/* <Link
-          my={1}
-          display="block"
-          fontSize="md"
-          lineHeight="normal"
-          fontWeight="semibold"
-          href="#"
-        >
-          {longLine}
-        </Link> */}
+        {
+          <Link
+            my={1}
+            display="block"
+            fontSize="md"
+            lineHeight="normal"
+            fontWeight="semibold"
+            href={longLine}
+          >
+            Link here
+            {/* {longLine} */}
+          </Link>
+        }
         <Text my={2} textAlign="justify" paddingRight={"50px"} color="gray.500">
           {summary}
         </Text>
