@@ -11,34 +11,38 @@ const DiscoverContent = () => {
       location: "Edinburgh Castle",
       summary: "",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Edinburgh_Castle_from_the_south_east.JPG/1600px-Edinburgh_Castle_from_the_south_east.JPG?20130906211529",
+        //https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edinburgh_Castle_from_the_Grassmarket.jpg/1600px-Edinburgh_Castle_from_the_Grassmarket.jpg?20210816212736",
     },
     {
       id: "2",
       location: "Camera Obscura & World of Illusions",
       summary: "",
       image:
-        "https://www.visitbritain.com/sites/default/files/styles/consumer_vertical_hero__1920x1080/public/paragraphs_bundles/hero/scotland_0.jpg?itok=moGcC_81",
+        //https://commons.wikimedia.org/wiki/File:Outlook_Tower,_Edinburgh,_January_2021.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Outlook_Tower%2C_Edinburgh%2C_January_2021.jpg/1600px-Outlook_Tower%2C_Edinburgh%2C_January_2021.jpg?20210124131307",
     },
     {
       id: "3",
       location: "Authur's Seat",
       summary: "",
       image:
-        "https://deih43ym53wif.cloudfront.net/cairngorms-national-park-scotland-shutterstock_726100102_4ab443fcc9.jpeg",
+        //https://commons.wikimedia.org/wiki/File:Edinburgh_Arthur_Seat_dsc06165.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Edinburgh_Arthur_Seat_dsc06165.jpg/1600px-Edinburgh_Arthur_Seat_dsc06165.jpg?20050716211839",
     },
     {
       id: "4",
       location: "The Kelpies",
       summary: "",
       image:
-        "https://i.guim.co.uk/img/media/7f434d0e05ac6d8c3ca8fde35f4a0972e03c7cb6/0_181_5482_3291/master/5482.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=56a71cf7af13b5d0b5b6faeedf7579e8",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/The_Kelpies_16-9_Stitch.jpg/1600px-The_Kelpies_16-9_Stitch.jpg?20160117151632",
     },
     {
       id: "5",
       location: "Calton Hill",
       summary: "",
       image:
+        //https://commons.wikimedia.org/wiki/File:The_Kelpies_16-9_Stitch.jpg
         "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
     },
     {
@@ -46,35 +50,40 @@ const DiscoverContent = () => {
       location: "Edinburgh Zoo",
       summary: "",
       image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
+        //https://commons.wikimedia.org/wiki/File:Meerkats_at_Edinburgh_Zoo_-_geograph.org.uk_-_3292441.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Meerkats_at_Edinburgh_Zoo_-_geograph.org.uk_-_3292441.jpg?20220311011522",
     },
     {
       id: "7",
       location: "Loch Ness",
       summary: "",
       image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
+        //https://commons.wikimedia.org/wiki/File:Urquhart_Castle_2_20211024.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Urquhart_Castle_2_20211024.jpg/1587px-Urquhart_Castle_2_20211024.jpg?20211123174832",
     },
     {
       id: "8",
       location: "Royal Mile",
       summary: "",
       image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
+        //https://commons.wikimedia.org/wiki/File:Royal_Mile,_Edinburgh_-_geograph.org.uk_-_502544.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Royal_Mile%2C_Edinburgh_-_geograph.org.uk_-_502544.jpg?20110205095945",
     },
     {
       id: "9",
       location: "Dynamic Earth",
       summary: "",
       image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
+        //https://commons.wikimedia.org/wiki/File:Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg/1599px-Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg?20210811001052",
     },
     {
       id: "10",
       location: "Scott Monument",
       summary: "",
       image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
+        //https://commons.wikimedia.org/wiki/File:The_Scott_Monument_on_Princes_Street,_Edinburgh.jpg
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_Scott_Monument_on_Princes_Street%2C_Edinburgh.jpg/1600px-The_Scott_Monument_on_Princes_Street%2C_Edinburgh.jpg?20200109105217",
     },
   ];
 
