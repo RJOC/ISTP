@@ -9,7 +9,8 @@ const DiscoverContent = () => {
     {
       id: "1",
       location: "Edinburgh Castle",
-      summary: "",
+      summary:
+        "The oldest fortified place in Europe, Edinburgh Castle is the perfect location to dive into the rich history that Scotland has to offer.",
       image:
         //https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edinburgh_Castle_from_the_Grassmarket.jpg/1600px-Edinburgh_Castle_from_the_Grassmarket.jpg?20210816212736",
@@ -17,7 +18,8 @@ const DiscoverContent = () => {
     {
       id: "2",
       location: "Camera Obscura & World of Illusions",
-      summary: "",
+      summary:
+        "From vortex tunnels to shrinking rooms, Camera Obscura and the World of Illusions is an experience where nothing is actually as it seems.",
       image:
         //https://commons.wikimedia.org/wiki/File:Outlook_Tower,_Edinburgh,_January_2021.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Outlook_Tower%2C_Edinburgh%2C_January_2021.jpg/1600px-Outlook_Tower%2C_Edinburgh%2C_January_2021.jpg?20210124131307",
@@ -25,7 +27,8 @@ const DiscoverContent = () => {
     {
       id: "3",
       location: "Authur's Seat",
-      summary: "",
+      summary:
+        "Authur's seat, an acient volcano which is home to some of the best views in Edinburgh. Located in Holyrood Park, it is 340 million years old.",
       image:
         //https://commons.wikimedia.org/wiki/File:Edinburgh_Arthur_Seat_dsc06165.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Edinburgh_Arthur_Seat_dsc06165.jpg/1600px-Edinburgh_Arthur_Seat_dsc06165.jpg?20050716211839",
@@ -35,6 +38,7 @@ const DiscoverContent = () => {
       location: "The Kelpies",
       summary: "",
       image:
+        //https://commons.wikimedia.org/wiki/File:The_Kelpies_16-9_Stitch.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/The_Kelpies_16-9_Stitch.jpg/1600px-The_Kelpies_16-9_Stitch.jpg?20160117151632",
     },
     {
@@ -42,8 +46,8 @@ const DiscoverContent = () => {
       location: "Calton Hill",
       summary: "",
       image:
-        //https://commons.wikimedia.org/wiki/File:The_Kelpies_16-9_Stitch.jpg
-        "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
+        //https://commons.wikimedia.org/wiki/File:View_of_Edinburgh_from_Calton_Hill_2014_05.JPG
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/View_of_Edinburgh_from_Calton_Hill_2014_05.JPG/1426px-View_of_Edinburgh_from_Calton_Hill_2014_05.JPG?20140801175931",
     },
     {
       id: "6",
