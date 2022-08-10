@@ -85,7 +85,7 @@ const GroupBody = () => {
           color={"#8FBBDA!important"}
           paddingTop="20px"
         >
-          Groups
+          Create and Join Groups
         </Text>
 
         {/* Side drawer section */}

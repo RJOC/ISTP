@@ -36,7 +36,8 @@ const DiscoverContent = () => {
     {
       id: "4",
       location: "The Kelpies",
-      summary: "",
+      summary:
+        "Between Falkirk and Grangemouth you will find the 30-metre tall sculptures of hourse-heads. A monument to the horse-powered heritage across the United Kingdom and Scotland.",
       image:
         //https://commons.wikimedia.org/wiki/File:The_Kelpies_16-9_Stitch.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/The_Kelpies_16-9_Stitch.jpg/1600px-The_Kelpies_16-9_Stitch.jpg?20160117151632",
@@ -44,7 +45,8 @@ const DiscoverContent = () => {
     {
       id: "5",
       location: "Calton Hill",
-      summary: "",
+      summary:
+        "Looking for a quick escape from the city? Calton Hill is home to city views, an art galary and the unfinished National Monument. An edinburgh must see!",
       image:
         //https://commons.wikimedia.org/wiki/File:View_of_Edinburgh_from_Calton_Hill_2014_05.JPG
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/View_of_Edinburgh_from_Calton_Hill_2014_05.JPG/1426px-View_of_Edinburgh_from_Calton_Hill_2014_05.JPG?20140801175931",
@@ -52,7 +54,8 @@ const DiscoverContent = () => {
     {
       id: "6",
       location: "Edinburgh Zoo",
-      summary: "",
+      summary:
+        "Europe's leading centre of conservation, education and research, Edinburgh Zoo is 82 acres of wooded hillside, home to over 2,500 amazing and endangered animals.",
       image:
         //https://commons.wikimedia.org/wiki/File:Meerkats_at_Edinburgh_Zoo_-_geograph.org.uk_-_3292441.jpg
         "https://upload.wikimedia.org/wikipedia/commons/1/1b/Meerkats_at_Edinburgh_Zoo_-_geograph.org.uk_-_3292441.jpg?20220311011522",
@@ -60,7 +63,8 @@ const DiscoverContent = () => {
     {
       id: "7",
       location: "Loch Ness",
-      summary: "",
+      summary:
+        "37km southwest of Inverness you will find the stunning Loch Ness. The largest freshwater loch in the Highlands of Scotland. Keep an eye out for the Loch Ness Monster.",
       image:
         //https://commons.wikimedia.org/wiki/File:Urquhart_Castle_2_20211024.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Urquhart_Castle_2_20211024.jpg/1587px-Urquhart_Castle_2_20211024.jpg?20211123174832",
@@ -68,7 +72,8 @@ const DiscoverContent = () => {
     {
       id: "8",
       location: "Royal Mile",
-      summary: "",
+      summary:
+        "A succession of streets in Old Town Edinburgh formulates the Royal Mile. It runs between Holyrood Palace and Edinburgh Castle.",
       image:
         //https://commons.wikimedia.org/wiki/File:Royal_Mile,_Edinburgh_-_geograph.org.uk_-_502544.jpg
         "https://upload.wikimedia.org/wikipedia/commons/5/5b/Royal_Mile%2C_Edinburgh_-_geograph.org.uk_-_502544.jpg?20110205095945",
@@ -76,7 +81,8 @@ const DiscoverContent = () => {
     {
       id: "9",
       location: "Dynamic Earth",
-      summary: "",
+      summary:
+        "The Dynamic Earth tells the story of planet Earth. It starts at the Big Bang and takes you all the way through to the modern day.",
       image:
         //https://commons.wikimedia.org/wiki/File:Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg/1599px-Dynamic_Earth_-_geograph.org.uk_-_2469969.jpg?20210811001052",
@@ -84,7 +90,8 @@ const DiscoverContent = () => {
     {
       id: "10",
       location: "Scott Monument",
-      summary: "",
+      summary:
+        "In Princes Street Gardens you will find the Scott Monument. It stands 61 meters tall and is one of the most iconic landmarks in Edinburgh.",
       image:
         //https://commons.wikimedia.org/wiki/File:The_Scott_Monument_on_Princes_Street,_Edinburgh.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/The_Scott_Monument_on_Princes_Street%2C_Edinburgh.jpg/1600px-The_Scott_Monument_on_Princes_Street%2C_Edinburgh.jpg?20200109105217",
