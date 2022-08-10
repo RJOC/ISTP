@@ -9,9 +9,9 @@ const DiscoverContent = () => {
     {
       id: "1",
       location: "Edinburgh Castle",
-      summary:
+      summary: "",
+      image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Edinburgh_Castle_from_the_south_east.JPG/1600px-Edinburgh_Castle_from_the_south_east.JPG?20130906211529",
-      image: "",
     },
     {
       id: "2",
