@@ -27,7 +27,6 @@ const GroupBody = () => {
     {
       id: "1",
       title: "Internation students",
-      longline: "www.google.com",
       body: "Testing this function!",
       image:
         "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
@@ -153,7 +152,6 @@ const GroupBody = () => {
                       key={id}
                       title={title}
                       body={body}
-                      longline={longline}
                       image={image}
                     />
                   );

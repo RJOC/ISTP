@@ -11,6 +11,7 @@ const DiscoverContent = () => {
       location: "Edinburgh Castle",
       summary:
         "The oldest fortified place in Europe, Edinburgh Castle is the perfect location to dive into the rich history that Scotland has to offer.",
+      longline: "www.google.com",
       image:
         //https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_the_Grassmarket.jpg
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edinburgh_Castle_from_the_Grassmarket.jpg/1600px-Edinburgh_Castle_from_the_Grassmarket.jpg?20210816212736",

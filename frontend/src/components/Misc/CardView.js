@@ -57,7 +57,7 @@ function CardView(props) {
           href={longLine}
           color="black"
         >
-          {longLine}
+          This is the link
         </Link>
 
         <Button maxWidth="100px" colorScheme="blue" mr={3} my={2}>
