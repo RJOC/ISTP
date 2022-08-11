@@ -9,6 +9,7 @@ const {
   redescribeGroup,
   relocateGroup,
   redateGroup,
+  fetchGroupChats,
 } = require("../controllers/chatControllers");
 const { protect } = require("../middleware/authMiddleware");
 
@@ -16,6 +17,7 @@ const router = express.Router();
 
 router.route("/").post(protect, accessChat); //only the logged in users can access the chats
 router.route("/").get(protect, fetchChats); //getting all the chats from the database for each user
+router.route("/fetchgroups").get(protect, fetchGroupChats); //Get all groups
 router.route("/group").post(protect, createGroupChat); //Creating group chats (post request)
 router.route("/rename").put(protect, renameGroup); //Rename the group
 

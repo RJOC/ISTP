@@ -1,5 +1,7 @@
 import React from "react";
 import { Center, Square } from "@chakra-ui/react";
+import GroupChatModal from "./GroupChatModal";
+
 import {
   Box,
   Flex,
@@ -47,22 +49,11 @@ function CardView(props) {
         <Text my={2} textAlign="justify" paddingRight={"50px"} color="gray.500">
           {summary}
         </Text>
-
-        <Link
-          my={1}
-          display="block"
-          fontSize="md"
-          lineHeight="normal"
-          fontWeight="semibold"
-          href={longLine}
-          color="black"
-        >
-          This is the link
-        </Link>
-
-        <Button maxWidth="100px" colorScheme="blue" mr={3} my={2}>
-          Create trip
-        </Button>
+        <GroupChatModal location={location} marginTop="100px">
+          <Button maxWidth="100%" colorScheme="blue" mr={3} my={2}>
+            Create Group Trip
+          </Button>
+        </GroupChatModal>
       </Stack>
     </Box>
   );

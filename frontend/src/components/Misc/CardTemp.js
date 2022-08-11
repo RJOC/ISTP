@@ -7,13 +7,63 @@ import {
   Text,
   Stack,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
+import { ChatState } from "../../Context/ChatProvider";
 
 export default function CardTemp(props) {
-  const { title, body, image } = props;
+  const { groupId, title, body, loc, date, users, image } = props;
+  const toast = useToast();
+  const { user } = ChatState();
+
+  const handleAddUser = async () => {
+    if (users.find((u) => u._id === user._id)) {
+      toast({
+        title: "You are already in this group!",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      return;
+    }
+
+    try {
+      const config = {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      };
+      const { data } = await axios.put(
+        `/api/chat/groupadd`,
+        {
+          chatId: groupId,
+          userId: user._id,
+        },
+        config
+      );
+      toast({
+        title: "Group Joined!",
+        status: "success",
+        description: "Continue to chats to interact!",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+    } catch (error) {
+      toast({
+        title: "Error Occured!",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+    }
+  };
 
   return (
-    <Center height={"100%"} maxH="100rem" p={20}>
+    <Center height={"100%"} maxH="100rem" maxW="100rem" width={"100%"} p={20}>
       <Box
         maxW={"600px"}
         w={"full"}
@@ -61,7 +111,13 @@ export default function CardTemp(props) {
           <Text color={"gray.500"}>{body}</Text>
         </Stack>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
-          <Button maxWidth="100px" colorScheme="blue" mr={3} my={2}>
+          <Button
+            maxWidth="100px"
+            onClick={handleAddUser}
+            colorScheme="blue"
+            mr={3}
+            my={2}
+          >
             Join Group
           </Button>
           {/* <Avatar
@@ -73,10 +129,10 @@ export default function CardTemp(props) {
               Next Trip:
             </Text>
             <Text align={"flex"} color={"gray.500"}>
-              Location:
+              Location: {loc}
             </Text>
             <Text align={"flex"} color={"gray.500"}>
-              Date:
+              Date: {date}
             </Text>
           </Stack>
         </Stack>

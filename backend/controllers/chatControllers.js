@@ -74,6 +74,31 @@ const fetchChats = expressAsyncHandler(async (req, res) => {
   }
 });
 
+const fetchGroupChats = expressAsyncHandler(async (req, res) => {
+  try {
+    Chat.find({
+      users: { $not: { $elemMatch: { $eq: req.user._id } } },
+      isGroupChat: { $ne: false },
+    })
+      .populate("users", "-password")
+      .populate("groupAdmin", "-password")
+      .populate("latestMessage")
+      .sort({ updateAt: -1 })
+      .then(async (results) => {
+        results = await User.populate(results, {
+          path: "latestMessage.sender",
+          select: "name picture email",
+        });
+
+        res.status(200).send(results);
+      });
+    //how we are going to find the chats
+  } catch (error) {
+    res.status(400);
+    throw new Error(error.message);
+  }
+});
+
 const createGroupChat = expressAsyncHandler(async (req, res) => {
   if (
     !req.body.users ||
@@ -263,4 +288,5 @@ module.exports = {
   redateGroup,
   addToGroup,
   removeFromGroup,
+  fetchGroupChats,
 };

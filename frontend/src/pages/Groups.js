@@ -5,8 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import GroupBody from "../components/Misc/GroupBody";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { ChatState } from "../Context/ChatProvider";
+import { useState } from "react";
 
 function Groups() {
+  const [fetchAgain, setFetchAgain] = useState(false);
+  const { user } = ChatState("");
   const navigateLog = useNavigate();
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
@@ -20,7 +24,7 @@ function Groups() {
   return (
     <div className="Inspire">
       <NavBar />
-      <GroupBody />
+      {user && <GroupBody fetchAgain={fetchAgain} />}
       <Footer />
     </div>
   );

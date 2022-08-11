@@ -4,14 +4,13 @@ import { Box, Text } from "@chakra-ui/layout";
 import { SimpleGrid, Container } from "@chakra-ui/react";
 import CardTemp from "./CardTemp";
 import GroupChatModal from "./GroupChatModal";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+import { ChatState } from "../../Context/ChatProvider";
 
 import {
   Button,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
   Tooltip,
   useDisclosure,
   Input,
@@ -20,53 +19,44 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 
-const GroupBody = () => {
+const GroupBody = ({ fetchAgain }) => {
+  const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { groups, setGroups } = ChatState();
+  const [loggedUser, setLoggedUser] = useState();
+  const { user } = ChatState();
 
-  const dataList = [
-    {
-      id: "1",
-      title: "Internation students",
-      body: "Testing this function!",
-      image:
-        "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
-    },
-    {
-      id: "2",
-      title: "Surf Club",
-      body: "Surfers of Scotland",
-      image:
-        "https://www.visitbritain.com/sites/default/files/styles/consumer_vertical_hero__1920x1080/public/paragraphs_bundles/hero/scotland_0.jpg?itok=moGcC_81",
-    },
-    {
-      id: "3",
-      title: "Photo Club ",
-      body: "Lets photo Scotland together",
-      image:
-        "https://deih43ym53wif.cloudfront.net/cairngorms-national-park-scotland-shutterstock_726100102_4ab443fcc9.jpeg",
-    },
-    {
-      id: "4",
-      title: "The walkers ",
-      body: "We like to walk around Scotland",
-      image:
-        "https://i.guim.co.uk/img/media/7f434d0e05ac6d8c3ca8fde35f4a0972e03c7cb6/0_181_5482_3291/master/5482.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=56a71cf7af13b5d0b5b6faeedf7579e8",
-    },
-    {
-      id: "5",
-      title: "Runners",
-      body: "We like to run around Scotland",
-      image:
-        "https://www.planetware.com/photos-large/SCO/scotland-edinburgh-castle-2.jpg",
-    },
-    {
-      id: "6",
-      title: "Joggers",
-      body: "We like to jog around Scotland",
-      image:
-        "https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg",
-    },
-  ];
+  const i = 0;
+
+  const fetchGroups = async () => {
+    try {
+      const config = {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      };
+
+      const { data } = await axios.get("/api/chat/fetchgroups", config);
+      setGroups(data);
+    } catch (error) {
+      toast({
+        title: "Error Occured!",
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom-left",
+      });
+    }
+  };
+
+  useEffect(() => {
+    setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
+    fetchGroups();
+    // eslint-disable-next-line
+  }, [fetchAgain]);
+
+  const dataList = [];
 
   return (
     <>
@@ -78,6 +68,8 @@ const GroupBody = () => {
         w="100%"
         borderRadius="lg"
         borderWidth="1px"
+        height={"100%"}
+        minH={"600px"}
       >
         <Text
           fontSize={"30px"}
@@ -144,19 +136,26 @@ const GroupBody = () => {
           >
             {/* CARD START */}
             <Container maxW="80rem" centerContent>
-              <SimpleGrid columns={[1, 1, 1, 2]}>
-                {dataList.map(function (data) {
-                  const { id, title, body, longline, image } = data;
-                  return (
+              {groups
+                ? groups.map((group) => (
                     <CardTemp
-                      key={id}
-                      title={title}
-                      body={body}
-                      image={image}
+                      key={group._id}
+                      groupId={group._id}
+                      title={group.chatName}
+                      body={group.groupDesc}
+                      loc={group.groupLoc}
+                      date={group.groupDate}
+                      users={group.users}
+                      image={
+                        "https://pbs.twimg.com/profile_images/1255513316702785542/8uJV9v2c_400x400.jpg"
+                      }
+                      fetchAgain={fetchAgain}
                     />
-                  );
-                })}
-              </SimpleGrid>
+                  ))
+                : console.log("hello")}
+              {/* <SimpleGrid columns={[1, 1, 1, 2]}>
+              
+              </SimpleGrid> */}
             </Container>
             {/* CARD END */}
           </Box>

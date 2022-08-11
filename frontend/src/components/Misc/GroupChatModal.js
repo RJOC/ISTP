@@ -21,7 +21,7 @@ import { ChatState } from "../../Context/ChatProvider";
 import UserBadgeItem from "../UserAvatar/UserBadgeItem";
 import UserListItem from "../UserAvatar/UserListItem";
 
-const GroupChatModal = ({ children }) => {
+const GroupChatModal = ({ children, location }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [groupChatName, setGroupChatName] = useState();
   const [groupChatDesc, setGroupChatDesc] = useState();
@@ -186,6 +186,7 @@ const GroupChatModal = ({ children }) => {
               <Input
                 placeholder="Trip Location"
                 mb={3}
+                defaultValue={location}
                 onChange={(g) => setGroupChatLocation(g.target.value)}
               />
             </FormControl>
