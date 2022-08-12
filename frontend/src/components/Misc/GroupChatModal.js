@@ -136,12 +136,12 @@ const GroupChatModal = ({ children, location }) => {
           position: "bottom",
         });
       }
-
       onClose();
     } catch (error) {
       toast({
         title: "Problem Creating Group Chat!",
         status: "warning",
+        description: error.message,
         duration: 5000,
         isClosable: true,
         position: "bottom",
