@@ -136,6 +136,7 @@ const GroupChatModal = ({ children, location }) => {
         isClosable: true,
         position: "bottom",
       });
+      onClose();
     }
   };
 
