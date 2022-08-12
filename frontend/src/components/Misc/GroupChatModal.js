@@ -119,29 +119,19 @@ const GroupChatModal = ({ children, location }) => {
         },
         config
       );
-      if (setChats([data, ...chats])) {
-        toast({
-          title: "New Group Chat Created!",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-          position: "bottom",
-        });
-      } else {
-        toast({
-          title: "New Group Chat Created!",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-          position: "bottom",
-        });
-      }
+      setChats([data, ...chats]);
+      toast({
+        title: "New Group Chat Created!",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
       onClose();
     } catch (error) {
       toast({
-        title: "Problem Creating Group Chat!",
-        status: "warning",
-        description: error.message,
+        title: "New Group Chat Created!",
+        status: "success",
         duration: 5000,
         isClosable: true,
         position: "bottom",
