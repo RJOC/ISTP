@@ -91,7 +91,7 @@ const GroupBody = ({ fetchAgain }) => {
           padding="5px 10px 5px 10px"
           bg={"white"}
         >
-          <Tooltip
+          {/* <Tooltip
             label="Search Groups to chat"
             hasArrow
             placement="bottom-end"
@@ -107,7 +107,7 @@ const GroupBody = ({ fetchAgain }) => {
                 Search Groups
               </Text>
             </Button>
-          </Tooltip>
+          </Tooltip> */}
           <GroupChatModal marginTop="100px">
             <Button
               colorScheme="blue"
