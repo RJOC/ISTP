@@ -112,10 +112,10 @@ const createGroupChat = expressAsyncHandler(async (req, res) => {
 
   var users = JSON.parse(req.body.users);
 
-  if (users.length < 1) {
+  if (users.length < 0) {
     return res
       .status(400)
-      .send("More than 1 users are required to form a group chat");
+      .send("More than 0 users are required to form a group chat");
   }
 
   users.push(req.user);
