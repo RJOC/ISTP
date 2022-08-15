@@ -106,9 +106,9 @@ export const RegisterPanel = () => {
     if (picture.type === "image/jpeg" || picture.type === "image/png") {
       const data = new FormData();
       data.append("file", picture);
-      data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("upload_preset", "istp");
+      data.append("cloud_name", "dq5dpwsnj");
+      fetch("https://api.cloudinary.com/v1_1/dq5dpwsnj/image/upload", {
         method: "post",
         body: data,
       })
