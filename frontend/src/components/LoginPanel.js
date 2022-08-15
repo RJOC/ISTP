@@ -114,7 +114,7 @@ export const LoginPanel = () => {
             Login
           </Button>
 
-          <p>Already registered?</p>
+          <p>Not Registered?</p>
           <Link to="/register" style={{ textDecoration: "none" }}>
             {" "}
             <p> Sign up</p>
