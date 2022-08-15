@@ -16,11 +16,6 @@ import React from "react";
 import { InfoCircle } from "react-bootstrap-icons";
 
 const Profile = ({ user, children }) => {
-  const photo = user.picture;
-  if (!photo) {
-    photo =
-      "https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg";
-  }
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -45,7 +40,11 @@ const Profile = ({ user, children }) => {
               <Image
                 borderRadius="full"
                 boxSize={"150px"}
-                src={photo}
+                src={
+                  user.picture
+                    ? user.picture
+                    : "https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg"
+                }
                 alt={"User Profile Picture"}
               />
             </div>
