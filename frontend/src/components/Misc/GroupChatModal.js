@@ -190,9 +190,7 @@ const GroupChatModal = ({ children, location }) => {
                 mb={3}
                 defaultValue={location}
                 onChange={(g) => setGroupChatLocation(g.target.value)}
-              >
-                {location}
-              </Input>
+              />
             </FormControl>
 
             {/* Date */}
