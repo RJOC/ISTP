@@ -133,7 +133,7 @@ const SideDraw = () => {
           >
             <Search />
             <Text display={{ base: "none", md: "flex" }} px="4">
-              Search People
+              Search Chats
             </Text>
           </Button>
         </Tooltip>
