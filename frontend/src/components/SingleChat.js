@@ -222,6 +222,14 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     value={newMessage}
                     onChange={typingHandler}
                   />
+                  <Button
+                    name="button"
+                    id="button"
+                    onClick={sendMessage}
+                    colorScheme={"blue"}
+                    alignContent="center"
+                    mt={2}
+                  ></Button>
                 </FormControl>
               </Box>
             </>
