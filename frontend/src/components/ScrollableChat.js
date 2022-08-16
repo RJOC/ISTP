@@ -24,8 +24,9 @@ const ScrollableChat = ({ messages }) => {
                   mt="7px"
                   mr={1}
                   size="sm"
-                  bg={"#D3E7F4"}
+                  bg={"#FFFF"}
                   cursor="pointer"
+                  color={"black"}
                   name={m.sender.name}
                   src={m.sender.picture}
                 />

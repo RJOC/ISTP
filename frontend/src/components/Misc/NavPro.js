@@ -36,10 +36,11 @@ const NavPro = () => {
     <div>
       <Menu>
         <MenuButton
-          p={1}
-          background="#3182CE"
-          rounded="5px"
-          marginRight={"10px"}
+          colorScheme="blue"
+          border={"none"}
+          bg="#8FBBDA"
+          as={Button}
+          color="white"
         >
           <Bell color="white" size={25} />
         </MenuButton>
@@ -66,14 +67,20 @@ const NavPro = () => {
         </MenuList>
       </Menu>
       <Menu>
-        <MenuButton colorScheme="blue" as={Button} color="white">
+        <MenuButton
+          colorScheme="blue"
+          border={"none"}
+          bg="#8FBBDA"
+          as={Button}
+          color="white"
+        >
           <Avatar
             size="sm"
             cursor="pointer"
             name={user.name}
             src={user.picture}
-            bg="#3182CE"
-            border={0}
+            bg="#8FBBDA"
+            border={"none"}
           />
           &nbsp;&nbsp;
           <CaretDownFill color="white" />
@@ -81,21 +88,26 @@ const NavPro = () => {
         <MenuList background={"#8FBBDA"}>
           <Profile user={user}>
             <MenuItem
-              bg="#3182CE!important"
-              color={"white"}
+              bg="#8FBBDA!important"
+              color={"white!important"}
+              rounded={7}
+              border="none"
               _hover={{
-                background: "#2C5282",
+                background: "white!important",
+                color: "#8FBBDA!important",
               }}
             >
               Profile
             </MenuItem>
           </Profile>
-          <MenuDivider />
           <MenuItem
-            bg="#3182CE"
+            bg="#8FBBDA"
+            border={"none"}
+            rounded={7}
             onClick={signOutH}
             _hover={{
-              background: "#2C5282",
+              background: "white!important",
+              color: "#8FBBDA!important",
             }}
           >
             SignOut

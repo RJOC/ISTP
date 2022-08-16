@@ -1,6 +1,7 @@
 import "../App.css";
 import {
   Box,
+  Button,
   IconButton,
   Input,
   Spinner,
@@ -10,7 +11,7 @@ import {
 import { FormControl } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { ArrowLeft } from "react-bootstrap-icons";
+import { ArrowLeft, Send } from "react-bootstrap-icons";
 import { getSender, getSenderFull } from "../config/ChatLogics";
 import { ChatState } from "../Context/ChatProvider";
 import Profile from "./Misc/Profile";
@@ -69,7 +70,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   };
 
   const sendMessage = async (event) => {
-    if (event.key === "Enter" && newMessage) {
+    if (
+      (event.key === "Enter" || event.currentTarget.id === "button") &&
+      newMessage
+    ) {
+      console.log("it worked");
+
       try {
         const config = {
           headers: {
@@ -254,7 +260,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 p={3}
                 background="#D3E7F5"
                 width={"100%"}
-                height="50%"
+                height="70%"
                 borderRadius={"lg"}
                 overflowY="hidden"
               >
@@ -262,7 +268,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                   <ScrollableChat messages={messages} />
                 </div>
 
-                <FormControl onKeyDown={sendMessage} isRequired mt={3}>
+                <FormControl
+                  onKeyDown={sendMessage}
+                  display="flex"
+                  isRequired
+                  mt={3}
+                >
                   <Input
                     variant="filled"
                     bg="white"
@@ -270,6 +281,16 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     value={newMessage}
                     onChange={typingHandler}
                   />
+                  <Button
+                    name="button"
+                    id="button"
+                    onClick={sendMessage}
+                    colorScheme={"blue"}
+                    alignContent="center"
+                    mt={2}
+                  >
+                    <Send size={"20px"} color="white" />
+                  </Button>
                 </FormControl>
               </Box>
             </>

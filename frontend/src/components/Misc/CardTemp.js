@@ -11,14 +11,16 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { ChatState } from "../../Context/ChatProvider";
+import { useEffect, useState } from "react";
 
 export default function CardTemp(props) {
+  const [isActive, setIsActive] = useState(false);
   const { groupId, title, body, loc, date, users, image } = props;
   const toast = useToast();
   const { user } = ChatState();
 
   const handleAddUser = async () => {
-    if (users.find((u) => u._id === user._id)) {
+    if (users.find((u) => u._id === user._id) || isActive) {
       toast({
         title: "You are already in this group!",
         status: "error",
@@ -51,6 +53,7 @@ export default function CardTemp(props) {
         isClosable: true,
         position: "bottom",
       });
+      setIsActive((current) => !current);
     } catch (error) {
       toast({
         title: "Error Occured!",
@@ -63,7 +66,7 @@ export default function CardTemp(props) {
   };
 
   return (
-    <Center height={"100%"} maxH="100rem" maxW="100rem" width={"100%"} p={20}>
+    <Center height={"100%"} maxH="100rem" maxW="100rem" width={"100%"} p={6}>
       <Box
         maxW={"600px"}
         w={"full"}
@@ -114,11 +117,11 @@ export default function CardTemp(props) {
           <Button
             maxWidth="100px"
             onClick={handleAddUser}
-            colorScheme="blue"
+            colorScheme={isActive ? "green" : "blue"}
             mr={3}
             my={2}
           >
-            Join Group
+            {isActive ? "Joined" : "Join Group"}
           </Button>
           {/* <Avatar
             src={"https://avatars0.githubusercontent.com/u/1164541?v=4"}
