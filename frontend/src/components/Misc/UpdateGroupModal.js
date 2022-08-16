@@ -1,5 +1,6 @@
 import React from "react";
 import { InfoCircle } from "react-bootstrap-icons";
+import Moment from "react-moment";
 import {
   Modal,
   ModalOverlay,
@@ -359,7 +360,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 
             <FormControl display="flex">
               <Input
-                placeholder="Chat Name"
+                placeholder={selectedChat.chatName}
                 mb={3}
                 value={groupChatName}
                 onChange={(e) => setGroupChatName(e.target.value)}
@@ -379,7 +380,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 
             <FormControl display="flex">
               <Textarea
-                placeholder="Group Description"
+                placeholder={selectedChat.groupDesc}
                 mb={3}
                 value={groupChatDesc}
                 onChange={(f) => setGroupChatDesc(f.target.value)}
@@ -398,7 +399,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
             {/* Location */}
             <FormControl display="flex">
               <Input
-                placeholder="Trip Location"
+                placeholder={selectedChat.groupLoc}
                 mb={3}
                 value={groupLocation}
                 onChange={(g) => setGroupLocation(g.target.value)}
@@ -418,7 +419,6 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
             <FormControl display="flex">
               <Input
                 marginTop={0}
-                placeholder="Select Date and Time"
                 size="md"
                 type="date"
                 value={groupDate}
@@ -458,7 +458,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
             )}
           </ModalBody>
 
-          <ModalFooter>
+          <ModalFooter display="left">
             <Button colorScheme="red" onClick={() => handleRemove(user)}>
               Leave Group
             </Button>
