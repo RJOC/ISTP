@@ -214,7 +214,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                   </div>
                 )}
 
-                <FormControl onKeyDown={sendMessage} isRequired mt={3}>
+                <FormControl
+                  display={"flex"}
+                  onKeyDown={sendMessage}
+                  isRequired
+                  mt={3}
+                >
                   <Input
                     variant="filled"
                     bg="white"
@@ -229,7 +234,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     colorScheme={"blue"}
                     alignContent="center"
                     mt={2}
-                  ></Button>
+                  >
+                    <Send size={"20px"} color="white" />
+                  </Button>
                 </FormControl>
               </Box>
             </>
