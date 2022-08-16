@@ -14,7 +14,6 @@ const MyChats = ({ fetchAgain }) => {
 
   const toast = useToast();
   const fetchChats = async () => {
-    // console.log(user._id);
     try {
       const config = {
         headers: {
@@ -38,7 +37,6 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-    // eslint-disable-next-line
   }, [fetchAgain]);
 
   return (
@@ -100,9 +98,12 @@ const MyChats = ({ fetchAgain }) => {
                     ? getSender(loggedUser, chat.users)
                     : chat.chatName}
                 </Text>
+                {console.log("ashhh")}
+                {console.log(chat.latestMessage.sender.name)}
+                {console.log("ashhh")}
                 {chat.latestMessage && (
                   <Text fontSize="xs">
-                    <b>{/*chat.latestMessage.sender.name*/} : </b>
+                    <b> {chat.latestMessage.sender.name} : </b>
                     {chat.latestMessage.content.length > 50
                       ? chat.latestMessage.content.substring(0, 51) + "..."
                       : chat.latestMessage.content}
