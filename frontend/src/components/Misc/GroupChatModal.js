@@ -85,7 +85,13 @@ const GroupChatModal = ({ children, location }) => {
   };
 
   const handleSubmit = async () => {
-    if (!groupChatName || !selectedUsers || !groupChatDesc || !groupChatDate) {
+    if (
+      !groupChatName ||
+      !selectedUsers ||
+      !groupChatDesc ||
+      !groupChatLocation ||
+      !groupChatDate
+    ) {
       toast({
         title: "Please fill out all the fields above!",
         status: "warning",
@@ -182,9 +188,10 @@ const GroupChatModal = ({ children, location }) => {
               <Input
                 placeholder="Trip Location"
                 mb={3}
-                defaultValue={location}
                 onChange={(g) => setGroupChatLocation(g.target.value)}
-              />
+              >
+                {location}
+              </Input>
             </FormControl>
 
             {/* Date */}
