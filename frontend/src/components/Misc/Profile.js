@@ -48,7 +48,9 @@ const Profile = ({ user, children }) => {
             </div>
             <Text fontSize="30px">{user.name}</Text>
             <Text fontSize="20px">
-              {"This will be where the user description goes!"}
+              {
+                "In future works, this will be the location of a personal profile discription and user interest and hobbies."
+              }
             </Text>
           </ModalBody>
 
