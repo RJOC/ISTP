@@ -258,18 +258,20 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 overflowY="hidden"
               >
                 {/* THE GROUP DETAILS WILL BE HEREEE! */}
-                <Text>
-                  <b>Trip Date: </b>
+                <Text display="flex">
+                  <b>Trip Date: &nbsp;&nbsp;&nbsp;&nbsp;</b>
                   <Moment format="DD/MM/YYYY">
                     {moment(selectedChat.groupDate, "YYYY-MM-DD")}
                   </Moment>
                 </Text>
                 {/* {selectedChat.groupDate} */}
-                <b>Countdown:</b>
-                <ReactMomentCountDown toDate={dateInFuture} />
+                <Text display="flex">
+                  <b>Countdown:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                  <ReactMomentCountDown toDate={dateInFuture} />
+                </Text>
 
                 <p>
-                  <b>Trip Location:</b>
+                  <b>Trip Location:&nbsp;&nbsp;&nbsp;&nbsp;</b>
                   {selectedChat.groupLoc}{" "}
                 </p>
                 <p>

@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 import { ChatState } from "../../Context/ChatProvider";
 import { useEffect, useState } from "react";
+import moment from "moment";
 
 export default function CardTemp(props) {
   const [isActive, setIsActive] = useState(false);
@@ -135,7 +136,7 @@ export default function CardTemp(props) {
               Location: {loc}
             </Text>
             <Text align={"flex"} color={"gray.500"}>
-              Date: {date}
+              Date: {moment(date).format("DD/MM/YYYY")}
             </Text>
           </Stack>
         </Stack>
