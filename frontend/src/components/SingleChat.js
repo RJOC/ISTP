@@ -19,6 +19,8 @@ import UpdateGroupModal from "./Misc/UpdateGroupModal";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 import Moment from "react-moment";
+import moment from "moment";
+import ReactMomentCountDown from "react-moment-countdown";
 
 const ENDPOINT = "https://istp-web-application.herokuapp.com/";
 var socket, selectedChatCompare;
@@ -29,6 +31,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [newMessage, setNewMessage] = useState("");
   const [socketConnected, setSocketConnected] = useState(false);
   const toast = useToast();
+  const todaysdate = new Date();
+  const dateInFuture = new Date("2022-08-20");
 
   const {
     user,
@@ -249,16 +253,21 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 background="#3182CE"
                 width={"100%"}
                 height="30%"
+                p={4}
                 borderRadius={"lg"}
                 overflowY="hidden"
               >
                 {/* THE GROUP DETAILS WILL BE HEREEE! */}
                 <Text>
                   <b>Trip Date: </b>
-                  <Moment format="DD/MM/YYYY">{selectedChat.groupDate}</Moment>
+                  <Moment format="DD/MM/YYYY">
+                    {moment(selectedChat.groupDate, "YYYY-MM-DD")}
+                  </Moment>
                 </Text>
                 {/* {selectedChat.groupDate} */}
-                <b>Until Trip:</b>
+                <b>Countdown:</b>
+                <ReactMomentCountDown toDate={dateInFuture} />
+
                 <p>
                   <b>Trip Location:</b>
                   {selectedChat.groupLoc}{" "}

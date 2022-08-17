@@ -75,11 +75,11 @@ const NavPro = () => {
           color="white"
         >
           <Avatar
-            size="sm"
+            size="md"
             cursor="pointer"
             name={user.name}
             src={user.picture}
-            bg="#8FBBDA"
+            bg="#3182CE"
             border={"none"}
           />
           &nbsp;&nbsp;

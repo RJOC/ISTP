@@ -1,5 +1,5 @@
 import React from "react";
-import { InfoCircle } from "react-bootstrap-icons";
+import { Pencil } from "react-bootstrap-icons";
 import Moment from "react-moment";
 import {
   Modal,
@@ -34,6 +34,10 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
   const [loading, setLoading] = useState(false);
   const [renameloading, setRenameLoading] = useState(false);
   const toast = useToast();
+  const [isActive, setIsActive] = useState(false);
+  const [isActive1, setIsActive1] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
 
   const { selectedChat, setSelectedChat, user } = ChatState();
 
@@ -107,6 +111,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       setRenameLoading(false);
     }
     setGroupChatName("");
+    setIsActive((current) => !current);
   };
 
   const handleRedesc = async () => {
@@ -143,6 +148,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
     }
 
     setGroupChatDesc("");
+    setIsActive1((current) => !current);
   };
 
   const handleRelocation = async () => {
@@ -178,6 +184,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       setRenameLoading(false);
     }
     setGroupLocation("");
+    setIsActive2((current) => !current);
   };
 
   const handleRedate = async () => {
@@ -216,6 +223,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       setRenameLoading(false);
     }
     setGroupDate("");
+    setIsActive3((current) => !current);
   };
 
   const handleAddUser = async (user1) => {
@@ -325,7 +333,7 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       <IconButton
         bg={"#3182CE"}
         display={{ base: "flex" }}
-        icon={<InfoCircle />}
+        icon={<Pencil />}
         onClick={onOpen}
         color="white"
         _hover={{
@@ -367,12 +375,12 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               />
               <Button
                 variant="solid"
-                colorScheme="blue"
+                colorScheme={isActive ? "green" : "blue"}
                 ml={1}
                 isLoading={renameloading}
                 onClick={handleRename}
               >
-                Update
+                {isActive ? "Updated" : "Update"}
               </Button>
             </FormControl>
 
@@ -387,12 +395,12 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               />
               <Button
                 variant="solid"
-                colorScheme="blue"
                 ml={1}
                 isLoading={renameloading}
                 onClick={handleRedesc}
+                colorScheme={isActive1 ? "green" : "blue"}
               >
-                Update
+                {isActive1 ? "Updated" : "Update"}
               </Button>
             </FormControl>
 
@@ -406,12 +414,12 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               />
               <Button
                 variant="solid"
-                colorScheme="blue"
+                colorScheme={isActive2 ? "green" : "blue"}
                 ml={1}
                 isLoading={renameloading}
                 onClick={handleRelocation}
               >
-                Update
+                {isActive2 ? "Updated" : "Update"}
               </Button>
             </FormControl>
 
@@ -427,12 +435,12 @@ const UpdateGroupModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               />
               <Button
                 variant="solid"
-                colorScheme="blue"
+                colorScheme={isActive3 ? "green" : "blue"}
                 ml={1}
                 isLoading={renameloading}
                 onClick={handleRedate}
               >
-                Update
+                {isActive3 ? "Updated" : "Update"}
               </Button>
             </FormControl>
 
