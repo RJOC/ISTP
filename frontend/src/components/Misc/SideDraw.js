@@ -44,11 +44,6 @@ const SideDraw = () => {
   const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const signOutH = () => {
-    localStorage.removeItem("userInfo");
-    navigate("/login");
-  };
-
   const toast = useToast();
 
   const manSearch = async () => {

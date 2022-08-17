@@ -147,7 +147,7 @@ const GroupBody = ({ fetchAgain }) => {
                       date={group.groupDate}
                       users={group.users}
                       image={
-                        "https://pbs.twimg.com/profile_images/1255513316702785542/8uJV9v2c_400x400.jpg"
+                        "https://images.unsplash.com/photo-1532498551838-b7a1cfac622e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       }
                       fetchAgain={fetchAgain}
                     />
