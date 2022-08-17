@@ -7,7 +7,6 @@ import NavPro from "./Misc/NavPro";
 import logo from "../assets/img/logo.png";
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, seScrolled] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
 
@@ -34,10 +33,6 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  };
-
   return (
     <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -51,40 +46,16 @@ export const NavBar = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
-              href="/"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
+            <Nav.Link href="/" className={"navbar-link"}>
               Home
             </Nav.Link>
-            <Nav.Link
-              href="/inspire"
-              className={
-                activeLink === "inspire" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("inspire")}
-            >
+            <Nav.Link href="/inspire" className={"navbar-link"}>
               Discover
             </Nav.Link>
-            <Nav.Link
-              href="/groups"
-              className={
-                activeLink === "blog" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("blog")}
-            >
+            <Nav.Link href="/groups" className={"navbar-link"}>
               Groups
             </Nav.Link>
-            <Nav.Link
-              href="/chat"
-              className={
-                activeLink === "chats" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("chats")}
-            >
+            <Nav.Link href="/chat" className={"navbar-link"}>
               Chats
             </Nav.Link>
             &nbsp;&nbsp;&nbsp;

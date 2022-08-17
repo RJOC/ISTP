@@ -32,9 +32,7 @@ const Profile = ({ user, children }) => {
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
         <ModalOverlay />
         <ModalContent background={"#8FBBDA"}>
-          <ModalHeader fontSize={"40px"} d="flex">
-            {user.name}
-          </ModalHeader>
+          <ModalHeader />
           <ModalBody d="flex" flexDir="column">
             <div className="center">
               <Image
@@ -48,10 +46,10 @@ const Profile = ({ user, children }) => {
                 alt={"User Profile Picture"}
               />
             </div>
-            <Text fontSize="30px">{user.email}</Text>
-            {/* <Text fontSize="20px">
+            <Text fontSize="30px">{user.name}</Text>
+            <Text fontSize="20px">
               {"This will be where the user description goes!"}
-            </Text> */}
+            </Text>
           </ModalBody>
 
           <ModalFooter>

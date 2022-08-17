@@ -42,7 +42,7 @@ const NavPro = () => {
           as={Button}
           color="white"
         >
-          <Bell color="white" size={25} />
+          <Bell id="bellicon" color="white" size={25} />
         </MenuButton>
         <MenuList pl={"10px"} color="#3182CE">
           {!notifications.length && "No Messages"}
