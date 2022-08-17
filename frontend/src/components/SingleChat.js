@@ -269,7 +269,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                   {moment(selectedChat.groupDate, "YYYY-MM-DD").diff(
                     today,
                     "days"
-                  )}
+                  )}{" "}
+                  Days
                 </Text>
 
                 <p>
