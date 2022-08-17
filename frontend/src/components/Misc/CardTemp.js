@@ -124,10 +124,6 @@ export default function CardTemp(props) {
           >
             {isActive ? "Joined" : "Join Group"}
           </Button>
-          {/* <Avatar
-            src={"https://avatars0.githubusercontent.com/u/1164541?v=4"}
-            alt={"Author"}
-          /> */}
           <Stack direction={"column"} spacing={0} fontSize={"sm"}>
             <Text align={"flex"} color={"gray.500"}>
               Next Trip:

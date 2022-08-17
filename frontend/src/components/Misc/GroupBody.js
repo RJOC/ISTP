@@ -153,9 +153,6 @@ const GroupBody = ({ fetchAgain }) => {
                     />
                   ))
                 : console.log("hello")}
-              {/* <SimpleGrid columns={[1, 1, 1, 2]}>
-              
-              </SimpleGrid> */}
             </Container>
             {/* CARD END */}
           </Box>

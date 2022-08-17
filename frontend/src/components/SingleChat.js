@@ -31,8 +31,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [newMessage, setNewMessage] = useState("");
   const [socketConnected, setSocketConnected] = useState(false);
   const toast = useToast();
-  const todaysdate = new Date();
-  const dateInFuture = new Date("2022-08-20");
+  const today = moment(new Date());
 
   const {
     user,
@@ -267,7 +266,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 {/* {selectedChat.groupDate} */}
                 <Text display="flex">
                   <b>Countdown:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
-                  <ReactMomentCountDown toDate={dateInFuture} />
+                  {moment(selectedChat.groupDate, "YYYY-MM-DD").diff(
+                    today,
+                    "days"
+                  )}
                 </Text>
 
                 <p>
