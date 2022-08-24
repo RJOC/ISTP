@@ -189,6 +189,7 @@ const GroupChatModal = ({ children, location }) => {
                 placeholder="Trip Location"
                 mb={3}
                 defaultValue={this.state.location}
+                value={this.state.location}
                 key={this.state.location}
                 onChange={(g) => setGroupChatLocation(g.target.value)}
               />
