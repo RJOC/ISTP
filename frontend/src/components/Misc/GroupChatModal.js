@@ -188,9 +188,8 @@ const GroupChatModal = ({ children, location }) => {
               <Input
                 placeholder="Trip Location"
                 mb={3}
-                defaultValue={location}
-                value={location}
-                key={location}
+                defaultValue={this.state.location}
+                key={this.state.location}
                 onChange={(g) => setGroupChatLocation(g.target.value)}
               />
             </FormControl>
