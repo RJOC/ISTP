@@ -51,7 +51,7 @@ function CardView(props) {
         </Text>
         <GroupChatModal location={location} marginTop="100px">
           <Button maxWidth="100%" colorScheme="blue" mr={3} my={2}>
-            Create Group Trip
+            Propose Group Trip
           </Button>
         </GroupChatModal>
       </Stack>
