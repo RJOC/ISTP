@@ -85,13 +85,7 @@ const GroupChatModal = ({ children, location }) => {
   };
 
   const handleSubmit = async () => {
-    if (
-      !groupChatName ||
-      !selectedUsers ||
-      !groupChatDesc ||
-      !groupChatLocation ||
-      !groupChatDate
-    ) {
+    if (!groupChatName || !selectedUsers || !groupChatDesc || !groupChatDate) {
       toast({
         title: "Please fill out all the fields above!",
         status: "warning",
